@@ -12,7 +12,6 @@ class BooksController {
         title: 'test',
         list: []
       }
-      console.log("fullPath", fullPath)
       await redirectPage(ctx, fullPath, {datas});
     })
   }

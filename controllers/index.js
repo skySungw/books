@@ -3,7 +3,6 @@ import routes from '../routes';
 import Books from './booksController';
 import Users from './usersController';
 import { parseHtmlConfig } from '../config/config';
-console.log(routes);
 class KoaController {
   constructor(router) {
     this.router = router;

@@ -2,13 +2,11 @@ import routes from '../routes';
 // 路由匹配
 function matchUrl(url) {
   const pathArr = url.split('/');
-  console.log("pathArr", pathArr);
   const pathName = pathArr[1];
   let fullPath = '';
   if (pathName) {
     Object.keys(routes).forEach((v, i) => {
       if (v == pathName) {
-        console.log("v", v);
         if (routes[v].children) {
           routes[v].children.forEach((j,k) => {
             if (url.search(j.route) != -1) {
