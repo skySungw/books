@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/skySungw/books/issues"
   },
-  "homepage": "https://github.com/skySungw/books#readme"
+  "homepage": "https://github.com/skySungw/books#readme",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
+    "koa-swig": "^2.2.1"
+  }
 }
