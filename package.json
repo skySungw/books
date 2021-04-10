@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "babel-node --presets env index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,13 @@
   "dependencies": {
     "koa": "^2.13.1",
     "koa-router": "^10.0.0",
-    "koa-swig": "^2.2.1"
+    "koa-static": "^5.0.0",
+    "koa-swig": "^2.2.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "koa-convert": "^2.0.0"
   }
 }

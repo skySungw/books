@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{datas.title}}</title>
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+ 
+<body>
+  <!-- 1. 渲染数据 {{}}  -->
+  <h2>books{{datas.title}}</h2>
+  <a href="/add">添加新任务</a>
+  <hr>
+  <ul>
+    <!-- 2. for 循环 -->
+    {% for item in datas.list %}
+ 
+    <!-- 3. if else 判断 -->
+    {% if item.done %}
+    <li class="{{name}}">
+      {{item.id}} - 《{{item.book_name}}》 作者：{{item.book_auth}} 发版时间：{{ +item.book_publish_date }}
+    </li>
+ 
+    {% else %}
+    <li class="{{name}}">
+      <input type="checkbox">
+      {{item.id}} - 《{{item.book_name}}》 作者：{{item.book_auth}} 发版时间：{{ +item.book_publish_date }}
+    </li>
+ 
+    {% endif %}
+    {% endfor %}
+  </ul>
+</body>
+</html>
