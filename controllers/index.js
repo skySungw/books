@@ -1,3 +1,4 @@
+import Api from './ApiController';
 import Books from './booksController';
 import Users from './usersController';
 class KoaController {
@@ -7,44 +8,27 @@ class KoaController {
     this.init();
   }
   init() {
+    // get方式
     this.router.get('/', async (ctx, next) => {
-      // console.log('ctx', ctx)
-      // let result = await mysql.query('SELECT * from books');
-      // let datas = { // 自定义 数据
-      //   title: '图书列表',
-      //   list: result
-      // }
-      // const paths = ctx.request.url;
-      // const pathArr = paths.split('/');
-      // console.log("pathArr", pathArr);
-      // const pathName = pathArr[1];
-      // let fullPath = 'index';
-      // let flag = false; // false - 404, true - 有页面
-      // if (pathName || pathName == '') {
-      //   fullPath = '';
-      //   Object.keys(routes).forEach((v, i) => {
-      //     if (v == pathName) {
-      //       console.log("v", v);
-      //       if (routes[v].children) {
-      //         console.log("a", routes[v].children)
-      //         routes[v].children.forEach((j,k) => {
-      //           console.log('j.route', j.route, paths);
-      //           if (j.route == paths) {
-      //             fullPath = j.route.slice(1) + '.html';
-      //             flag = true;
-      //           }
-      //         })
-      //       }
-      //     }
-      //   })
-      // }
-      // console.log("path", path);
       let datas = {
-        title: 'test',
+        title: '首页',
         list: []
       }
       ctx.body = await ctx.render('index.html', { datas }); // 3. 使用
     })
+    // post请求，api接口
+    this.router.post('/', async (ctx, next) => {
+      ctx.set("Content-Type", "application/json")
+      ctx.body = JSON.stringify({
+        code: -1,
+        msg: '接口请求错误'
+      })
+    });
+    // 页面请求controller
+    this.initRoute();
+  }
+  initRoute() {
+    new Api(this.router);
     new Books(this.router);
     new Users(this.router);
   }

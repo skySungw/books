@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+  border-collapse:collapse;
+}
+table th,
+table td {
+  border: 1px solid #eee;
+  padding: 5px 10px;
+  text-align: left;
+}
+table thead tr { background: #f5f7fa; }
+table tbody tr:hover {background-color: turquoise;}
+
+table thead tr th:last-child,
+table tbody tr td:last-child { text-align: center; }
+
+table tbody tr td a { color: #333; }
+table tbody tr.off td,
+table tbody tr.off td a {
+  color: red;
+}

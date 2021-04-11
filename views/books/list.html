@@ -9,6 +9,7 @@
   <title>{{datas.title}}</title>
   <link rel="shortcut icon" href="../images/favicon.ico">
   <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/booklist.css">
 </head>
  
 <body>
@@ -17,27 +18,41 @@
     <div class="content">
       <!-- 1. 渲染数据 {{}}  -->
       <h2>books{{datas.title}}</h2>
-      <ul>
-        <!-- 2. for 循环 -->
-        {% for item in datas.list %}
-    
-        <!-- 3. if else 判断 -->
-        {% if item.done %}
-        <li class="{{name}}">
-          {{item.id}} - 《{{item.book_name}}》 作者：{{item.book_auth}} 发版时间：{{ item.book_publish_date }}
-        </li>
-    
-        {% else %}
-        <li class="{{name}}">
-          <input type="checkbox">
-          {{item.id}} - 《{{item.book_name}}》 作者：{{item.book_auth}} 发版时间：{{ item.book_publish_date }}
-        </li>
-    
-        {% endif %}
-        {% endfor %}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th width="50">序号</th>
+            <th>书名</th>
+            <th>作者</th>
+            <th>发版时间</th>
+            <th>书籍状态</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in datas.list %}
+          
+          {% if item.book_del_status == 1 %}
+          <tr>
+          {% else %}
+          <tr class="off">
+          {% endif %}
+            <td>{{ item.id }}</td>
+            <td>{{ item.book_name }}</td>
+            <td>{{ item.book_auth }}</td>
+            <td>{{ item.book_publish_date }}</td>
+            <td>{{ item.status }}</td>
+            <td>
+              <a href="javascript:;" class="on-operate" data-id="{{item.id}}">{{ item.operate }}</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </div>
   
+  <script src="../js/jquery-1.11.1.min.js"></script>
+  <script src="../js/booklist.js"></script>
 </body>
 </html>
