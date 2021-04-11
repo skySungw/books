@@ -28,6 +28,7 @@ async function redirectPage(ctx, page, data) {
   }
   ctx.body = await ctx.render(page, data); // 3. 使用
 }
+// 数据库下划线字段转驼峰字段
 function convertRetrunResult(v) {
   const obj = {};
   Object.keys(v).forEach(k => {
