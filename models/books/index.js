@@ -7,7 +7,7 @@ async function queryAllBooks() {
   const list=JSON.parse(JSON.stringify(result));
   const nList = [];
   list.forEach(v => {
-    v.book_publish_date = moment(v.book_publish_date).format('YYYY-MM-DD HH:mm:ss');
+    v.book_publish_date = moment(v.book_publish_date).format('YYYY-MM-DD');
     v.status = v.book_del_status == 0 ? '上架中' : '已下架';
     v.operate = v.book_del_status == 0 ? '下架' : '上架';
     // Object.keys(v).forEach(k => {

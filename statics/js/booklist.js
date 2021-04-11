@@ -1,5 +1,6 @@
 $(window).load(function() {	
 	'use strict';
+  // 编辑
   $('.edit').on('click', function() {
     const $this = $(this);
     const id = $this.attr('data-id');
@@ -11,15 +12,51 @@ $(window).load(function() {
       data: {
         id
       },
-      success(result) {
+      success({code, result}) {
         console.log("result", result);
+        if (code == 0) {
+          let $content = $('.pop-content-right', $this);
+          console.log("$('.idNo', $content)", $('.idNo'))
+          $('.idNo-hidden').val(result.id);
+          $('.idNo').html(result.id);
+          $('.book-name').val(result.bookName);
+          $('.book-auth').val(result.bookAuth);
+          $('.book-publish-date').val(result.bookPublishDate);
+          $('.book-status').html(result.status);
+          $('.bgPop,.pop').show();
+        }
       },
       fail(err) {
         console.log(err);
       }
-    })
-    // 再编辑
-  })
+    });
+  });
+  // 确认编辑
+  $('.pop-ok').on('click', function() {
+    let submitDataStr = decodeURI($("form").serialize());
+    const sendData = {};
+    let arr = submitDataStr.split('&');
+    arr.forEach(v => {
+      let nArr = v.split('=');
+      sendData[nArr[0]] = nArr[1];
+    });
+    sendData.bookDate = new Date(sendData.bookDate);
+    $.ajax({
+      url: '/api/books/modifybook',
+      type: 'POST',
+      dataType: 'json',
+      data: sendData,
+      success({code, result}) {
+        console.log("result", result);
+        if (code == 0) {
+          window.location.reload();
+        }
+      },
+      fail(err) {
+        console.log(err);
+      }
+    });
+  });
   // 上下架
 	$('.on-operate').on('click', function() {
     const $this = $(this);
@@ -36,7 +73,6 @@ $(window).load(function() {
       },
       success({ code }) {
         if (code == 0) {
-          alert('操作成功');
           window.location.reload();
         }
       },
@@ -44,6 +80,9 @@ $(window).load(function() {
         console.log(err);
       }
     })
-  })
-  
+  });
+   // 关闭编辑层
+   $('.pop-close').click(function () {
+    $('.bgPop,.pop').hide();
+  });
 });

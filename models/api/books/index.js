@@ -1,5 +1,6 @@
 import { convertRetrunResult } from '../../../utils';
 const mysql = require('../../../db/mysql');
+const moment = require('moment');
 // 操作指定id书籍（上、下架）
 async function operateBooksById(param) {
   let result = await mysql.query(`UPDATE books SET book_del_status = ${param.type} where id = ${param.id}`);
@@ -19,6 +20,8 @@ async function queryBookById(param) {
     result: null
   }
   if (list && list.length > 0) {
+    list[0].book_publish_date = moment(list[0].book_publish_date).format('YYYY-MM-DD');
+    list[0].status = list[0].book_del_status == 0 ? '上架中' : '已下架';
     result.result = convertRetrunResult(list[0]);
   } else {
     result.code = -1;
@@ -26,7 +29,16 @@ async function queryBookById(param) {
   }
   return result;
 }
+async function modifyBookById(param) {
+  let result = await mysql.query(`UPDATE books SET book_name = '${param.name}', book_auth = '${param.auth}', book_publish_date = '${param.bookDate}' where id = ${param.id}`);
+  result = JSON.parse(JSON.stringify(result));
+  if (result.affectedRows > 0) {
+    return { code: 0, msg: 'success' }
+  }
+  return { code: -1, msg: '操作失败'}
+}
 export {
   operateBooksById,
-  queryBookById
+  queryBookById,
+  modifyBookById
 }

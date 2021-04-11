@@ -1,4 +1,4 @@
-import { operateBooksById, queryBookById } from '../../models/api/books';
+import { operateBooksById, queryBookById, modifyBookById } from '../../models/api/books';
 class ApiController {
   constructor(router) {
     this.router = router;
@@ -25,6 +25,9 @@ class ApiController {
       // 查询指定id书籍信息
       case '/api/books/querybook':
         return queryBookById(param);
+      // 根据指定id，更改书籍信息
+      case '/api/books/modifybook':
+        return modifyBookById(param);
     }
   }
 }

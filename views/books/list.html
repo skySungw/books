@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{datas.title}}</title>
+  <title>{{ datas.title }}</title>
   <link rel="shortcut icon" href="../images/favicon.ico">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/booklist.css">
@@ -16,8 +16,6 @@
   <div class="container">
     {% include "../header.html" ignore missing %}
     <div class="content">
-      <!-- 1. 渲染数据 {{}}  -->
-      <h2>books{{datas.title}}</h2>
       <table>
         <thead>
           <tr>
@@ -32,7 +30,7 @@
         <tbody>
           {% for item in datas.list %}
           
-          {% if item.bookDelStatus == 1 %}
+          {% if item.bookDelStatus == 0 %}
           <tr>
           {% else %}
           <tr class="off">
@@ -52,7 +50,36 @@
       </table>
     </div>
   </div>
-  
+  <!--遮罩层-->
+  <div class="bgPop"></div>
+  <!--弹出框-->
+  <div class="pop">
+    <div class="pop-top">
+      <h2>编辑书籍</h2>
+      <span class="pop-close">Ｘ</span>
+    </div>
+    <div class="pop-content">
+      <div class="pop-content-left">
+        <img src="" alt="" class="teathumb">
+      </div>
+      <div class="pop-content-right">
+        <form class="edit-form" action="">
+          <input type="hidden" name="id" class="idNo-hidden" value="" />
+          <ul>
+            <li><label>id</label><span class="idNo"></span></li>
+            <li><label>书名</label><input type="text" class="book-name" name="name" value="" placeholder="书籍名" /></li>
+            <li><label>作者</label><input type="text" class="book-auth" name="auth" value="" placeholder="作者" /></li>
+            <li><label>发版时间</label><input type="text" class="book-publish-date" name="bookDate" value="" placeholder="发版时间" /></li>
+            <li><label>书籍状态</label><span class="book-status"></span></li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <div class="pop-foot">
+      <input type="button" value="我再想想" class="pop-cancel pop-close"/>
+      <input type="button" value="确认修改" class="pop-ok"/>
+    </div>
+  </div>
   <script src="../js/jquery-1.11.1.min.js"></script>
   <script src="../js/booklist.js"></script>
 </body>
