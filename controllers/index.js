@@ -1,8 +1,5 @@
-import { path } from 'koa/lib/request';
-import routes from '../routes';
 import Books from './booksController';
 import Users from './usersController';
-import { parseHtmlConfig } from '../config/config';
 class KoaController {
   constructor(router) {
     this.router = router;

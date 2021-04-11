@@ -6,7 +6,7 @@ const staticResource = require('koa-static');
 const path = require('path');
 const Swig = require('koa-swig');
 const co = require('co');
-const mysql = require('../db/mysql');
+// const mysql = require('../db/mysql');
  
 const app = new Koa();
 const router = new Router();
