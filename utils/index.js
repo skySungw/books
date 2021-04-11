@@ -28,7 +28,16 @@ async function redirectPage(ctx, page, data) {
   }
   ctx.body = await ctx.render(page, data); // 3. 使用
 }
+function convertRetrunResult(v) {
+  const obj = {};
+  Object.keys(v).forEach(k => {
+    const keys = k.replace(/_(\w)/g, function($0, $1){return $1.toUpperCase()})
+    obj[keys] = v[k];
+  });
+  return obj;
+}
 module.exports = {
   matchUrl,
-  redirectPage
+  redirectPage,
+  convertRetrunResult
 }

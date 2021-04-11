@@ -1,4 +1,4 @@
-import { deleteBooksById } from '../../models/api/books';
+import { operateBooksById, queryBookById } from '../../models/api/books';
 class ApiController {
   constructor(router) {
     this.router = router;
@@ -17,10 +17,14 @@ class ApiController {
     });
   }
   fetchJsonData(ctx) {
+    const param = ctx.request.body;
     switch(ctx.request.url) {
-      // 删除指定id的书籍
-      case '/api/books/deletebook':
-        return deleteBooksById(ctx.request.body);
+      // 操作指定id的书籍
+      case '/api/books/operatebook':
+        return operateBooksById(param);
+      // 查询指定id书籍信息
+      case '/api/books/querybook':
+        return queryBookById(param);
     }
   }
 }
