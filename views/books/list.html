@@ -32,7 +32,7 @@
         <tbody>
           {% for item in datas.list %}
           
-          {% if item.book_del_status == 1 %}
+          {% if item.bookDelStatus == 1 %}
           <tr>
           {% else %}
           <tr class="off">
@@ -43,7 +43,8 @@
             <td>{{ item.bookPublishDate }}</td>
             <td>{{ item.status }}</td>
             <td>
-              <a href="javascript:;" class="on-operate" data-id="{{item.id}}">{{ item.operate }}</a>
+              <a href="javascript:;" class="edit" data-id="{{ item.id }}">编辑</a>
+              <a href="javascript:;" class="on-operate" data-id="{{ item.id }}">{{ item.operate }}</a>
             </td>
           </tr>
           {% endfor %}
