@@ -37,8 +37,18 @@ async function modifyBookById(param) {
   }
   return { code: -1, msg: '操作失败'}
 }
+async function addBook(param) {
+  const sqlStr = `INSERT INTO books(book_name, book_auth, book_publish_date) values ('${param.name}', '${param.auth}', '${param.bookDate}')`;
+  let result = await mysql.query(sqlStr);
+  result = JSON.parse(JSON.stringify(result));
+  if (result.affectedRows > 0) {
+    return { code: 0, msg: 'success' }
+  }
+  return { code: -1, msg: '操作失败'}
+}
 export {
   operateBooksById,
   queryBookById,
-  modifyBookById
+  modifyBookById,
+  addBook
 }

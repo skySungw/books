@@ -10,12 +10,16 @@
   <link rel="shortcut icon" href="../images/favicon.ico">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/booklist.css">
+  <link rel="stylesheet" href="../css/xndatepicker.css">
 </head>
  
 <body>
   <div class="container">
     {% include "../header.html" ignore missing %}
     <div class="content">
+      <div>
+        <a href="javascript:;" class="add-book">添加</a>
+      </div>
       <table>
         <thead>
           <tr>
@@ -55,7 +59,7 @@
   <!--弹出框-->
   <div class="pop">
     <div class="pop-top">
-      <h2>编辑书籍</h2>
+      <h2 class="pop-title">编辑书籍</h2>
       <span class="pop-close">Ｘ</span>
     </div>
     <div class="pop-content">
@@ -69,7 +73,7 @@
             <li><label>id</label><span class="idNo"></span></li>
             <li><label>书名</label><input type="text" class="book-name" name="name" value="" placeholder="书籍名" /></li>
             <li><label>作者</label><input type="text" class="book-auth" name="auth" value="" placeholder="作者" /></li>
-            <li><label>发版时间</label><input type="text" class="book-publish-date" name="bookDate" value="" placeholder="发版时间" /></li>
+            <li><label>发版时间</label><input type="text" class="book-publish-date dateinputer" id="date" name="bookDate" value="" placeholder="发版时间" /></li>
             <li><label>书籍状态</label><span class="book-status"></span></li>
           </ul>
         </form>
@@ -81,6 +85,8 @@
     </div>
   </div>
   <script src="../js/jquery-1.11.1.min.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/xndatepicker.js"></script>
   <script src="../js/booklist.js"></script>
 </body>
 </html>

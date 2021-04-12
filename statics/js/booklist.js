@@ -1,7 +1,38 @@
 $(window).load(function() {	
 	'use strict';
+  var flag = 'edit';
+  $('.add-book').on('click', function() {
+    flag = 'add';
+    $('.pop-title').html('添加书籍');
+    $('.idNo-hidden').val('');
+    $('.idNo').html('');
+    $('.book-name').val('');
+    $('.book-auth').val('');
+    $('.book-publish-date').val('');
+    $('.book-status').html('');
+    $('.bgPop,.pop').show();
+  })
+  var date=new XNDatepicker($("#date"),{
+    format:'YYYY-MM-DD',
+    type:'date',//year/month/date/multiple/ week/datetime/datetimerange/ daterange/monthrange/yearrange
+    multipleDates:[],//当为多选日期类型时的初始值
+    startTime:'',
+    // endTime:'2036-04-04',
+    // minDate:'2019-04-04',
+    maxDate:'',
+    separator:' 到 ',
+    showType:'modal',
+    linkPanels:false,//面板联动
+    showClear:true,//是否显示清除按钮
+    autoConfirm:true,
+    showShortKeys:true,
+    autoFillDate:true,//自动变更element里面的值
+  },function(data){
+      console.log(data)
+  },)
   // 编辑
   $('.edit').on('click', function() {
+    flag = 'edit';
     const $this = $(this);
     const id = $this.attr('data-id');
     // 先查询单条信息
@@ -13,10 +44,8 @@ $(window).load(function() {
         id
       },
       success({code, result}) {
-        console.log("result", result);
         if (code == 0) {
-          let $content = $('.pop-content-right', $this);
-          console.log("$('.idNo', $content)", $('.idNo'))
+          $('.pop-title').html('编辑书籍');
           $('.idNo-hidden').val(result.id);
           $('.idNo').html(result.id);
           $('.book-name').val(result.bookName);
@@ -36,13 +65,23 @@ $(window).load(function() {
     let submitDataStr = decodeURI($("form").serialize());
     const sendData = {};
     let arr = submitDataStr.split('&');
+    let validFlag = true;
     arr.forEach(v => {
       let nArr = v.split('=');
       sendData[nArr[0]] = nArr[1];
+      if (!nArr[1]) {
+        validFlag = false;
+        return false;
+      }
     });
-    sendData.bookDate = new Date(sendData.bookDate);
+    if (!validFlag) {
+      alert('请填写必填项!');
+      return false;
+    }
+    sendData.bookDate = sendData.bookDate;
+    const url = flag === 'add' ? '/api/books/addbook' : '/api/books/modifybook';
     $.ajax({
-      url: '/api/books/modifybook',
+      url,
       type: 'POST',
       dataType: 'json',
       data: sendData,
