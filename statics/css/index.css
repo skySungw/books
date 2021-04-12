@@ -1,9 +1,9 @@
-* {margin: 0;padding: 0}
-.container { width: 1200px;margin: 0 auto;}
-.container header { margin: 0 auto;}
-.container header ul li {float:left;padding: 5px 20px;line-height: 40px;}
-.container header ul li a { display: block;height: 100%;}
-.container header ul li a:hover {color: red;}
+* {margin: 0;padding: 0 }
+.container { width: 1200px;margin: 0 auto; }
+.container header { margin: 0 auto; }
+.container header ul li {float:left;padding: 5px 20px;line-height: 40px; }
+.container header ul li a { display: block;height: 100%;font-size: 22px; }
+.container header ul li a:hover {color: red; }
 
 
 

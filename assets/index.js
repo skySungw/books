@@ -17,6 +17,18 @@ app.context.render = co.wrap(Swig(config.parseHtmlConfig));
 // 静态资源文件
 app.use(staticResource(path.join(__dirname, '..', 'statics')));
 
+app.use(async (ctx, next)=>{
+  try{
+    await next();   // 执行后代的代码
+    if(!ctx.body){  // 没有资源
+      ctx.body = await ctx.render('404.html', {  });
+    }
+  }catch(e){
+    // 如果后面的代码报错 返回500
+    ctx.body = await ctx.render('404.html', {  });
+  }
+});
+
 // 加载controller
 import KoaController from '../controllers';
 new KoaController(router);
