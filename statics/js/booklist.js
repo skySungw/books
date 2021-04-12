@@ -10,6 +10,7 @@ $(window).load(function() {
     $('.book-auth').val('');
     $('.book-publish-date').val('');
     $('.book-status').html('');
+    $('.pop-ok').val('添加书籍');
     $('.bgPop,.pop').show();
   })
   var date=new XNDatepicker($("#date"),{
@@ -33,6 +34,7 @@ $(window).load(function() {
   // 编辑
   $('.edit').on('click', function() {
     flag = 'edit';
+    $('.pop-ok').val('确认修改');
     const $this = $(this);
     const id = $this.attr('data-id');
     // 先查询单条信息
@@ -69,10 +71,10 @@ $(window).load(function() {
     arr.forEach(v => {
       let nArr = v.split('=');
       sendData[nArr[0]] = nArr[1];
-      if (!nArr[1]) {
-        validFlag = false;
-        return false;
-      }
+      // if (!nArr[1]) {
+      //   validFlag = false;
+      //   return false;
+      // }
     });
     if (!validFlag) {
       alert('请填写必填项!');

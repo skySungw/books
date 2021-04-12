@@ -1,3 +1,6 @@
+.content {
+  padding: 50px 0;
+}
 table {
   width: 100%;
   border-collapse:collapse;
@@ -6,7 +9,12 @@ table {
 table th,
 table td {
   border: 1px solid #eee;
-  padding: 5px 10px;
+  padding: 12px 10px;
+  min-width: 0;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  position: relative;
   text-align: left;
 }
 table thead tr { background: #f5f7fa; }
@@ -17,7 +25,7 @@ table tbody tr td:last-child { text-align: center; }
 
 table tbody tr td a { color: #333; }
 table tbody tr.off td,
-table tbody tr.off td a {
+table tbody tr.off td button {
   color: red;
 }
 
@@ -48,4 +56,38 @@ table tbody tr.off td a {
   flex: 1;
   line-height: 28px;
   padding: 0 10px;
+}
+/*  */
+.operate-btns {
+  padding: 15px 0;
+}
+.btn {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.btn.primary {
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+}
+.btn.small {
+  font-size: 12px;
 }
