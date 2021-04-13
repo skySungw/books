@@ -90,7 +90,9 @@ $(window).load(function() {
       success({code, result}) {
         console.log("result", result);
         if (code == 0) {
-          window.location.reload();
+          // window.location.reload();
+          
+          $('.bgPop,.pop').hide();
         }
       },
       fail(err) {

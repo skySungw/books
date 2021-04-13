@@ -18,7 +18,7 @@
     {% include "../header.html" ignore missing %}
     <div class="content">
       <div class="operate-btns">
-        <button class="add-book btn primary">添加书籍</button>
+        <button class="add-book btn primary" data-test-id="add-book">添加书籍</button>
       </div>
       <table>
         <thead>
@@ -71,9 +71,9 @@
           <input type="hidden" name="id" class="idNo-hidden" value="" />
           <ul>
             <li><label>id</label><span class="idNo"></span></li>
-            <li><label>书名</label><input type="text" class="book-name" name="name" value="" placeholder="书籍名" /></li>
-            <li><label>作者</label><input type="text" class="book-auth" name="auth" value="" placeholder="作者" /></li>
-            <li><label>发版时间</label><input type="text" class="book-publish-date dateinputer" id="date" name="bookDate" value="" placeholder="发版时间" /></li>
+            <li><label>书名</label><input type="text" data-test-id="book-name" class="book-name" name="name" value="" placeholder="书籍名" /></li>
+            <li><label>作者</label><input type="text" data-test-id="book-auth" class="book-auth" name="auth" value="" placeholder="作者" /></li>
+            <li><label>发版时间</label><input type="text" data-test-id="book-publish-date" class="book-publish-date dateinputer" id="date" name="bookDate" value="" placeholder="发版时间" /></li>
             <li><label>书籍状态</label><span class="book-status"></span></li>
           </ul>
         </form>
@@ -81,7 +81,7 @@
     </div>
     <div class="pop-foot">
       <input type="button" value="我再想想" class="pop-cancel pop-close"/>
-      <input type="button" value="确认修改" class="pop-ok"/>
+      <input type="button" value="确认修改" class="pop-ok" data-test-id="pop-ok"/>
     </div>
   </div>
   <script src="../js/jquery-1.11.1.min.js"></script>
