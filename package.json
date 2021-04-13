@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "babel-node --presets env index.js",
-    "test": "node tests/index.js"
+    "test:add": "node tests/add.js",
+    "test:edit": "node tests/edit.js"
   },
   "repository": {
     "type": "git",
