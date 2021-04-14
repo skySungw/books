@@ -67,3 +67,5 @@ npm run test:edit // 执行后，会默认修改第一条数据
 
 [一些自己做项目的小记录](https://www.yuque.com/u12131260/xzwgii/lql5kf)
 
+[自动化测试 playwright 相关文档](https://www.yuque.com/u12131260/xzwgii/am5r79)
+
