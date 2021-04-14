@@ -49,7 +49,7 @@
             <td>{{ item.status }}</td>
             <td>
               <button class="edit btn small" data-selector="edit" data-id="{{ item.id }}">编辑</button>
-              <button class="on-operate btn primary small" data-selector="{{ item.id }}">{{ item.operate }}</button>
+              <button class="on-operate btn primary small" data-id="{{ item.id }}">{{ item.operate }}</button>
             </td>
           </tr>
           {% endfor %}
