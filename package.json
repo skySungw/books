@@ -7,7 +7,8 @@
     "dev": "babel-node --presets env index.js",
     "test:add": "node tests/add.js",
     "test:edit": "node tests/edit.js",
-    "test": "node tests/test.js"
+    "test": "node tests/test.js",
+    "api:test": "mocha tests/apitest/test.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/skySungw/books#readme",
   "dependencies": {
+    "chai": "^4.3.4",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.0.0",
@@ -27,12 +29,14 @@
     "koa-swig": "^2.2.1",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "superagent": "^6.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "koa-convert": "^2.0.0",
+    "mocha": "^8.3.2",
     "playwright": "^1.10.0"
   }
 }
