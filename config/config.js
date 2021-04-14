@@ -10,7 +10,7 @@ export default {
   databaseConfig: {
     DATABASE: 'yii2basic',
     USERNAME: 'root',
-    PASSWORD: 'root123456',
+    PASSWORD: '',
     PORT: '3306',
     HOST: 'localhost'
   }

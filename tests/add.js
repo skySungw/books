@@ -32,6 +32,7 @@ const moment = require('moment');
   
   let total = 0;
   let timer = null;
+  await page2.click('text=test');
   async function inputBooks() {
     if (++total > 100) {
       timer = null;
@@ -40,15 +41,15 @@ const moment = require('moment');
     console.log("total", total);
     let count = Math.random() * 100 | 0;
     console.log(1)
-    await page2.click('[data-test-id=add-book]');
+    await page2.click('css=.container >> css=.content >> css=.operate-btns >> css=[data-selector="add-book"]');
     console.log(2)
-    await page2.fill('[data-test-id=book-name]', "书名" + count)
+    await page2.type('[data-selector=book-name]', "书名" + count)
     console.log(3)
-    await page2.fill('[data-test-id=book-auth]', "作者" + count)
+    await page2.type('[data-selector=book-auth]', "作者" + count)
     console.log(4)
-    await page2.fill('[data-test-id=book-publish-date]', dateStr);
+    await page2.type('[data-selector=book-publish-date]', dateStr);
     console.log(5);
-    await page2.click('[data-test-id=pop-ok]');
+    await page2.click('[data-selector=pop-ok]');
     console.log(6);
     timer = setTimeout(inputBooks, 1500);
   }

@@ -124,8 +124,15 @@ $(window).load(function() {
       }
     })
   });
-   // 关闭编辑层
-   $('.pop-close').click(function () {
+  // 关闭编辑层
+  $('.pop-close').click(function () {
     $('.bgPop,.pop').hide();
   });
+  $('.go').on('click', function() {
+    $('.add-book').trigger('click');
+    console.log('kkk')
+  });
+  $('.kkk').on('click', function() {
+    console.log("test");
+  })
 });
