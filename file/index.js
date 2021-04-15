@@ -1,4 +1,5 @@
 
+// 解析excel文件并生成json的文件
 var fs = require('fs');
 var path = require('path');
 var xlsx = require('node-xlsx');
