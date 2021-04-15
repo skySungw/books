@@ -13,6 +13,7 @@
 │  └─usersController
 ├─db // 数据库连接
 ├─file // 测试读取文件目录，暂时只有读取excel文件
+├─logs // 日志文件夹，生成的日志，都在此目录下
 ├─models // models
 │  ├─api // api层models
 │  │  ├─books
@@ -49,6 +50,8 @@
 自动化测试包 `playwright`
 
 接口测试 `mocha`
+
+日志库 `log4js`
 
 自动化部署也正在建设
 
