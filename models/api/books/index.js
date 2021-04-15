@@ -10,10 +10,8 @@ class API {
     this.param = arg.param;
     this.url = arg.url;
     this.logList = [`请求参数：${JSON.stringify(arg.param)}`];
-    this.init();
-  }
-  async init() {
-    this[`${this.methodName}`](this.param, this.url);
+    // 返回指定api接口方法
+    return this[`${this.methodName}`](this.param, this.url);
   }
   // 操作指定id书籍（上、下架）
   async operateBooksById(param, url) {
@@ -43,23 +41,13 @@ class API {
   }
   // 查询指定id书籍
   async queryBookById(param) {
-    console.log("ppp", param);
-    console.log("ppp", param);
-    console.log("ppp", param);
-    console.log("ppp", param);
-    console.log("ppp", param);
-    console.log("ppp", param);
-    console.log("ppp", param);
-    console.log("ppp", param);
     let list = await mysql.query(`SELECT * FROM books where id=${param.id}`);
-    console.log("list")
     list = JSON.parse(JSON.stringify(list));
     const result = {
       code: 0,
       msg: 'success',
       result: null
     }
-    console.log("kkkkkkk")
     if (list && list.length > 0) {
       list[0].book_publish_date = moment(list[0].book_publish_date).format('YYYY-MM-DD');
       list[0].status = list[0].book_del_status == 0 ? '上架中' : '已下架';
@@ -68,7 +56,6 @@ class API {
       result.code = -1;
       result.msg = '查询失败';
     }
-    console.log("result", result)
     return result;
   }
   async modifyBookById(param, url) {

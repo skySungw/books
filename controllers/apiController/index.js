@@ -15,7 +15,6 @@ class ApiController {
         code: 0
       }
       let res = await this.fetchJsonData(ctx);
-      console.log("res", res);
       Object.assign(result, res);
       ctx.body = JSON.stringify(result);
     });
@@ -45,7 +44,7 @@ class ApiController {
       default:
         logger.error(`接口请求错误，暂无接口：${ctx.request.url}`);
     }
-    await new API({methodName, param, url});
+    return await new API({methodName, param, url});
   }
 }
 module.exports = ApiController;
