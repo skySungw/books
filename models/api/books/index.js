@@ -3,12 +3,17 @@ const mysql = require('../../../db/mysql');
 const moment = require('moment');
 // 操作指定id书籍（上、下架）
 async function operateBooksById(param) {
-  let result = await mysql.query(`UPDATE books SET book_del_status = ${param.type} where id = ${param.id}`);
-  result = JSON.parse(JSON.stringify(result));
-  if (result.affectedRows > 0) {
-    return { code: 0, msg: 'success' }
+  if (param && param.id) {
+    let result = await mysql.query(`UPDATE books SET book_del_status = ${param.type} where id = ${param.id}`);
+    result = JSON.parse(JSON.stringify(result));
+    if (result.affectedRows > 0) {
+      return { code: 0, msg: 'success' };
+    }
+    return { code: -1, msg: '操作失败'};
+  } else {
+    return { code: -2, msg: '请确认参数是否正确'};
   }
-  return { code: -1, msg: '操作失败'}
+  
 }
 // 查询指定id书籍
 async function queryBookById(param) {
@@ -30,21 +35,31 @@ async function queryBookById(param) {
   return result;
 }
 async function modifyBookById(param) {
-  let result = await mysql.query(`UPDATE books SET book_name = '${param.name}', book_auth = '${param.auth}', book_publish_date = '${param.bookDate}' where id = ${param.id}`);
-  result = JSON.parse(JSON.stringify(result));
-  if (result.affectedRows > 0) {
-    return { code: 0, msg: 'success' }
+  if (param && param.id) {
+    let result = await mysql.query(`UPDATE books SET book_name = '${param.name}', book_auth = '${param.auth}', book_publish_date = '${param.bookDate}' where id = ${param.id}`);
+    result = JSON.parse(JSON.stringify(result));
+    if (result.affectedRows > 0) {
+      return { code: 0, msg: 'success' }
+    }
+    return { code: -1, msg: '操作失败'}
+  } else {
+    return { code: -2, msg: '请确认参数是否正确'};
   }
-  return { code: -1, msg: '操作失败'}
+  
 }
 async function addBook(param) {
-  const sqlStr = `INSERT INTO books(book_name, book_auth, book_publish_date) values ('${param.name}', '${param.auth}', '${param.bookDate}')`;
-  let result = await mysql.query(sqlStr);
-  result = JSON.parse(JSON.stringify(result));
-  if (result.affectedRows > 0) {
-    return { code: 0, msg: 'success' }
+  if (param && param.name && param.auth && param.bookDate) {
+    const sqlStr = `INSERT INTO books(book_name, book_auth, book_publish_date) values ('${param.name}', '${param.auth}', '${param.bookDate}')`;
+    let result = await mysql.query(sqlStr);
+    result = JSON.parse(JSON.stringify(result));
+    if (result.affectedRows > 0) {
+      return { code: 0, msg: 'success' }
+    }
+    return { code: -1, msg: '操作失败'}
+  } else {
+    return { code: -2, msg: '请确认参数是否正确'};
   }
-  return { code: -1, msg: '操作失败'}
+  
 }
 export {
   operateBooksById,
