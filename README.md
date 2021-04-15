@@ -38,6 +38,24 @@ npm run test:add // 执行后，会自动给数据库添加100条随机数据
 npm run test:edit // 执行后，会默认修改第一条数据
 ```
 
+## 接口测试
+
+接口测试文件写在了tests/api 目录下，由于是接口测试，也是依赖服务端的，因此在执行命令之前，也要先启动api服务，
+需要执行
+```javascript
+  npm run dev
+```
+来启动服务
+在8879端口启动成功后，接下来需要执行命令
+```javascript
+  npm run api:test
+```
+来执行tests/api 目录下的文件，目前只执行了一个test.js文件，后续会用通配符（*）匹配所有测试文件
+
+执行后的结果如下图，第一份通过，第二份为不通过
+
+![image](https://user-images.githubusercontent.com/17866531/114801084-9777cf00-9dcd-11eb-87ae-e1cf55097335.png)
+
 ## 简单配置
 
 ```javascript
