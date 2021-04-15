@@ -1,0 +1,50 @@
+[2021-04-15T17:26:22.126] [INFO] default - req的值是:
+[2021-04-15T17:26:22.127] [ERROR] default - gogogo error
+[2021-04-15T17:28:58.255] [INFO] default - req的值是:
+[2021-04-15T17:28:58.256] [INFO] prod - gogogo error
+[2021-04-15T17:29:19.070] [DEBUG] default - req的值是:
+[2021-04-15T17:29:19.071] [INFO] prod - gogogo error
+[2021-04-15T17:42:13.924] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T17:45:48.101] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:45:49.516] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:45:50.062] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:45:52.699] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:45:55.018] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:45:55.196] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:45:55.375] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:48:04.601] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:48:11.893] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:48:48.781] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:49:17.832] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:50:12.982] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:50:32.096] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:51:01.439] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:51:01.474] [INFO] default - success
+[2021-04-15T17:51:35.883] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:52:06.965] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:54:12.987] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:54:13.040] [INFO] default - 接口成功：/api/books/operatebook，返回值：{"code":0,"msg":"success"}
+[2021-04-15T17:54:38.313] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:54:38.484] [INFO] default - 接口成功：/api/books/operatebook  返回值：{"code":0,"msg":"success"}
+[2021-04-15T17:54:39.510] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:54:39.543] [INFO] default - 接口成功：/api/books/operatebook  返回值：{"code":0,"msg":"success"}
+[2021-04-15T17:59:03.444] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T17:59:03.521] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:01:39.425] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:01:39.474] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:01:40.473] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T18:02:04.521] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T18:02:06.571] [INFO] default - 请求接口：/api/books/modifybook
+[2021-04-15T18:02:06.601] [INFO] default - 接口请求成功：/api/books/modifybook | 请求参数：{"id":"339","name":"333","auth":"接口测试的作者","bookDate":"2021-04-15"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:02:33.444] [INFO] default - 请求接口：/api/books/modifybook
+[2021-04-15T18:02:33.445] [INFO] default - 接口请求成功：/api/books/modifybook | 请求参数：{"auth":"接口测试的作者","bookDate":"2021-04-15","name":"接口测试的书名","id":3} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:02:33.455] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-15T18:02:57.840] [INFO] default - 请求接口：/api/books/modifybook
+[2021-04-15T18:02:57.840] [INFO] default - 接口请求成功：/api/books/modifybook | 请求参数：{"auth":"接口测试的作者","bookDate":"2021-04-15","name":"接口测试的书名"} | 返回值：{"code":-2,"msg":"请确认参数是否正确"}
+[2021-04-15T18:02:57.853] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-15T18:03:36.488] [INFO] default - 请求接口：/api/books/modifybook
+[2021-04-15T18:03:36.488] [INFO] default - 接口请求成功：/api/books/modifybook | 请求参数：{"auth":"接口测试的作者","bookDate":"2021-04-15","name":"接口测试的书名"} | 返回值：{"code":-2,"msg":"请确认参数是否正确"}
+[2021-04-15T18:03:36.500] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-15T18:03:51.027] [INFO] default - 请求接口：/api/books/modifybook
+[2021-04-15T18:03:51.028] [ERROR] default - 接口有误：/api/books/modifybook | 请求参数：{"auth":"接口测试的作者","bookDate":"2021-04-15","name":"接口测试的书名"} | 返回值：{"code":-2,"msg":"请确认参数是否正确"}
+[2021-04-15T18:03:51.042] [INFO] default - 请求接口：/api/books/addbook

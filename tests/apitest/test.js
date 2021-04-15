@@ -7,7 +7,6 @@ describe('接口测试', function() {
       auth: "接口测试的作者",
       bookDate: "2021-04-15",
       name: "接口测试的书名",
-      id: 3
     }
     request
       .post('http://localhost:8879/api/books/modifybook')

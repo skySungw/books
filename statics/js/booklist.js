@@ -83,7 +83,6 @@ $(window).load(function() {
     sendData.bookDate = sendData.bookDate;
     const url = flag === 'add' ? '/api/books/addbook' : '/api/books/modifybook';
     console.log("sendData", sendData);
-    return false;
     $.ajax({
       url,
       type: 'POST',

@@ -10,7 +10,13 @@ const path = require('path');
 const Swig = require('koa-swig');
 const co = require('co');
 const opn = require('opn');
+import { getLogger } from '../utils/logs.js';
 
+const logger = getLogger();
+const prodLog = getLogger('prod');
+
+// logger.debug('req的值是:');
+// prodLog.info('gogogo error');
  
 const app = new Koa();
 const router = new Router();

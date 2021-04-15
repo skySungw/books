@@ -1,4 +1,7 @@
 import { operateBooksById, queryBookById, modifyBookById, addBook } from '../../models/api/books';
+import { getLogger } from '../../utils/logs.js';
+const logger = getLogger();
+
 class ApiController {
   constructor(router) {
     this.router = router;
@@ -18,20 +21,23 @@ class ApiController {
   }
   fetchJsonData(ctx) {
     const param = ctx.request.body;
-    switch(ctx.request.url) {
+    const url = ctx.request.url
+    logger.info(`请求接口：${url}`);
+    switch(url) {
       // 操作指定id的书籍
       case '/api/books/operatebook':
-        return operateBooksById(param);
+        return operateBooksById(param, url);
       // 查询指定id书籍信息
       case '/api/books/querybook':
-        return queryBookById(param);
+        return queryBookById(param, url);
       // 根据指定id，更改书籍信息
       case '/api/books/modifybook':
-        return modifyBookById(param);
+        return modifyBookById(param, url);
       // 插入books，单条数据
       case '/api/books/addbook':
-        return addBook(param);
+        return addBook(param, url);
     }
+    logger.error(`接口请求错误，暂无接口：${ctx.request.url}`);
   }
 }
 module.exports = ApiController;
