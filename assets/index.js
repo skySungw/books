@@ -3,7 +3,6 @@ import config from '../config/config';
 import KoaController from '../controllers';
 import { log } from '../utils';
 const Koa = require('koa');
-const Router = require('koa-router');
 var bodyParser = require('koa-bodyparser');;
 const staticResource = require('koa-static');
 const path = require('path');
@@ -19,7 +18,6 @@ const prodLog = getLogger('prod');
 // prodLog.info('gogogo error');
  
 const app = new Koa();
-const router = new Router();
 // 配置中间件
 app.use(bodyParser());
 // html模板解析
@@ -40,9 +38,8 @@ app.use(async (ctx, next)=>{
 });
 
 // 加载controller
-new KoaController(router);
+new KoaController(app);
 
-app.use(router.routes());
 app.listen(config.port);
 
 const linkUrl = "http://127.0.0.1:" + config.port;
