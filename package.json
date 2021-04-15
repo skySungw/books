@@ -30,6 +30,8 @@
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "mysql": "^2.18.1",
+    "node-xlsx": "^0.16.1",
+    "opn": "^6.0.0",
     "superagent": "^6.1.0"
   },
   "devDependencies": {

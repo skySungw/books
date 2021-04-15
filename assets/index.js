@@ -1,5 +1,7 @@
 
 import config from '../config/config';
+import KoaController from '../controllers';
+import { log } from '../utils';
 const Koa = require('koa');
 const Router = require('koa-router');
 var bodyParser = require('koa-bodyparser');;
@@ -7,6 +9,8 @@ const staticResource = require('koa-static');
 const path = require('path');
 const Swig = require('koa-swig');
 const co = require('co');
+const opn = require('opn');
+
  
 const app = new Koa();
 const router = new Router();
@@ -30,9 +34,15 @@ app.use(async (ctx, next)=>{
 });
 
 // 加载controller
-import KoaController from '../controllers';
 new KoaController(router);
 
 app.use(router.routes());
-console.log("port", config.port)
 app.listen(config.port);
+
+const linkUrl = "http://127.0.0.1:" + config.port;
+log(linkUrl, {
+  title: "访问地址:",
+  color: 'green'
+});
+
+opn(linkUrl);
