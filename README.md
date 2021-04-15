@@ -2,6 +2,42 @@
 
 本项目是一个简单的图书管理系统，正在一步步完善。
 
+### 项目结构
+
+```javascript
+├─assets // 启动文件，包括创建server，加载router等
+├─config // 项目一些配置参数
+├─controllers // controllers目录
+│  ├─apiController // post请求,api controller
+│  ├─booksController
+│  └─usersController
+├─db // 数据库连接
+├─file // 测试读取文件目录，暂时只有读取excel文件
+├─models // models
+│  ├─api // api层models
+│  │  ├─books
+│  │  └─users
+│  ├─books
+│  └─users
+├─routes // 路由
+├─statics // 静态资源文件目录
+│  ├─css
+│  ├─fonts
+│  ├─images
+│  │  └─404
+│  └─js
+├─tests // 测试文件夹，包括单元测试、自动化测试、api接口测试
+│  ├─apitest
+│  ├─chain
+│  └─images
+├─utils // 一些server端的工具类
+├─views // views,视图层
+│  ├─books
+│  └─users
+└─web // 暂时还没有用到
+
+```
+
 ### 技术说明
 
 目前有应用到 `Koa2` 创建服务端
