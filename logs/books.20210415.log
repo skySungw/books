@@ -48,3 +48,107 @@
 [2021-04-15T18:03:51.027] [INFO] default - 请求接口：/api/books/modifybook
 [2021-04-15T18:03:51.028] [ERROR] default - 接口有误：/api/books/modifybook | 请求参数：{"auth":"接口测试的作者","bookDate":"2021-04-15","name":"接口测试的书名"} | 返回值：{"code":-2,"msg":"请确认参数是否正确"}
 [2021-04-15T18:03:51.042] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-15T18:27:22.527] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:27:28.084] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:28:11.605] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:28:40.651] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:29:16.705] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:30:14.819] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:30:59.350] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:31:20.605] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:31:46.137] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:32:19.903] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:32:34.485] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:33:39.957] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:50:50.306] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:51:03.572] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:51:59.553] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:52:18.384] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:52:32.542] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:53:01.284] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:54:03.094] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:54:03.144] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:54:29.469] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:54:46.174] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:04.322] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:04.425] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:20.422] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:20.424] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:21.242] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:21.287] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:21.688] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:21.740] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:46.484] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:46.486] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:47.056] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:47.108] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:48.127] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:48.169] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"338","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:49.387] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:49.389] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"338","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:50.584] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:50.621] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"338","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:51.501] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:51.537] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:52.051] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:52.088] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:52.362] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:52.394] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:52.715] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:52.802] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:53.067] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:53.098] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:53.380] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:53.411] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:53.740] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:53.785] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:54.060] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:54.136] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:54.413] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:54.415] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:54.743] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:54.772] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:55.079] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:55.149] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:55:55.414] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:55:55.416] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"337","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:12.960] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:12.993] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:13.343] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:13.378] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:13.650] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:13.695] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:13.962] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:14.006] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:14.273] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:14.345] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:14.697] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:14.699] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:18.369] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:18.400] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:19.254] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:19.316] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:23.974] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:23.975] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:24.960] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:24.991] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:25.844] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:25.890] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:56:29.296] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T18:56:29.326] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T18:57:03.820] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T18:57:18.528] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T18:58:05.331] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T18:58:56.299] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T18:59:27.344] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T19:00:13.874] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T19:00:55.960] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T19:00:56.009] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T19:00:57.530] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-15T19:00:57.531] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"339","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-15T19:02:32.117] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T19:04:20.530] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T19:05:30.168] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T19:06:06.118] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T19:06:35.532] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-15T19:06:54.019] [INFO] default - 请求接口：/api/books/querybook

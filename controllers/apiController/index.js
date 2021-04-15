@@ -1,4 +1,4 @@
-import { operateBooksById, queryBookById, modifyBookById, addBook } from '../../models/api/books';
+import API from '../../models/api/books';
 import { getLogger } from '../../utils/logs.js';
 const logger = getLogger();
 
@@ -15,29 +15,37 @@ class ApiController {
         code: 0
       }
       let res = await this.fetchJsonData(ctx);
+      console.log("res", res);
       Object.assign(result, res);
       ctx.body = JSON.stringify(result);
     });
   }
-  fetchJsonData(ctx) {
+  async fetchJsonData(ctx) {
     const param = ctx.request.body;
     const url = ctx.request.url
     logger.info(`请求接口：${url}`);
+    let methodName = '';
     switch(url) {
       // 操作指定id的书籍
       case '/api/books/operatebook':
-        return operateBooksById(param, url);
+        methodName = 'operateBooksById';
+        break;
       // 查询指定id书籍信息
       case '/api/books/querybook':
-        return queryBookById(param, url);
+        methodName = 'queryBookById';
+        break;
       // 根据指定id，更改书籍信息
       case '/api/books/modifybook':
-        return modifyBookById(param, url);
+        methodName = 'modifyBookById';
+        break;
       // 插入books，单条数据
       case '/api/books/addbook':
-        return addBook(param, url);
+        methodName = 'addBook';
+        break;
+      default:
+        logger.error(`接口请求错误，暂无接口：${ctx.request.url}`);
     }
-    logger.error(`接口请求错误，暂无接口：${ctx.request.url}`);
+    await new API({methodName, param, url});
   }
 }
 module.exports = ApiController;
