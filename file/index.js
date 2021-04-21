@@ -3,7 +3,7 @@
 var fs = require('fs');
 var path = require('path');
 var xlsx = require('node-xlsx');
-var num = 8;
+var num = 1;
 var sheets = xlsx.parse('./file/static/' + num + '.xlsx');//获取到所有sheets
 var list = [];
 sheets.forEach(function(sheet){

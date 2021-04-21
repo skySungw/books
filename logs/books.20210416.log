@@ -1,0 +1,49 @@
+[2021-04-16T20:37:51.673] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:37:54.234] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:37:56.918] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:37:59.585] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:02.285] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:04.983] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:07.684] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:10.266] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:12.966] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:15.667] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:18.284] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:21.018] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:23.734] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:26.437] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:29.150] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:31.866] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:34.570] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:37.268] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:39.967] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:42.666] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:45.368] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:47.949] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:50.599] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:53.213] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:55.915] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:38:58.614] [INFO] default - 请求接口：/api/books/addbook
+[2021-04-16T20:44:53.536] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-16T20:44:55.229] [INFO] default - 请求接口：/api/books/modifybook
+[2021-04-16T20:44:55.257] [INFO] default - 接口请求成功：/api/books/modifybook | 请求参数：{"id":"365","name":"书名16","auth":"作者16","bookDate":"2021-04-16"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-16T20:44:57.052] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-16T20:45:29.506] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-16T20:45:29.547] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"365","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-16T20:45:33.203] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-16T20:45:33.232] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"365","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-16T20:45:34.041] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-16T20:45:34.066] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"365","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-16T20:45:34.721] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-16T20:45:34.787] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"365","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-16T20:45:35.346] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-16T20:45:35.375] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"365","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-16T20:45:36.006] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-16T20:45:36.042] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"365","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-16T20:45:36.451] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-16T20:45:36.484] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"365","type":"1"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-16T20:45:37.169] [INFO] default - 请求接口：/api/books/operatebook
+[2021-04-16T20:45:37.242] [INFO] default - 接口请求成功：/api/books/operatebook | 请求参数：{"id":"365","type":"0"} | 返回值：{"code":0,"msg":"success"}
+[2021-04-16T20:45:38.580] [INFO] default - 请求接口：/api/books/querybook
+[2021-04-16T20:45:39.786] [INFO] default - 请求接口：/api/books/modifybook
+[2021-04-16T20:45:39.787] [INFO] default - 接口请求成功：/api/books/modifybook | 请求参数：{"id":"365","name":"书名16","auth":"作者16","bookDate":"2021-04-16"} | 返回值：{"code":0,"msg":"success"}
