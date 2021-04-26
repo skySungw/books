@@ -3,7 +3,7 @@ const basePath = path.resolve(__dirname, '..', 'logs')
 const log4js = require('log4js');
 log4js.configure({
   replaceConsole: false,
-  pm2: true
+  pm2: true,
   appenders: {
     dev: {  //请求转发日志
       type: 'dateFile',    //指定日志文件按时间打印
