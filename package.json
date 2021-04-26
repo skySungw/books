@@ -11,7 +11,7 @@
     "api:test": "mocha tests/apitest/test.js",
     "git": "mocha tests/apitest/gittest.js",
     "gulp": "gulp babel",
-    "hook": "npm run dev"
+    "hook": "node tests/hook.js"
   },
   "repository": {
     "type": "git",
