@@ -13,6 +13,11 @@
     "gulp": "gulp babel",
     "hook": "node tests/hook.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run hook"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skySungw/books.git"
