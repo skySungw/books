@@ -15,8 +15,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run hook"
+      "pre-commit": "npm run lint-staged"
     }
+  },
+  "lint-staged": {
+    "**/*.js": "eslint --ext .js",
+    "**/*.vue": "eslint --ext .vue"
   },
   "repository": {
     "type": "git",
