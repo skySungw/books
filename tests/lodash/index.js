@@ -13,6 +13,7 @@ var users = [
   { 'user': 'pebbles', 'age': 1 }
 ];
  
+
 var youngest = _
   .chain(users)
   .sortBy('age')
